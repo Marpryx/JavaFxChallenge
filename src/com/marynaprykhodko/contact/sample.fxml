@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <TableView fx:id="contactTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="firstName" prefWidth="75.0" text="First Name" />
+          <TableColumn fx:id="lastName" prefWidth="75.0" text="Last Name" />
+            <TableColumn fx:id="phoneNumber" prefWidth="120.0" text="Phone Number" />
+            <TableColumn fx:id="notes" prefWidth="75.0" text="Notes" />
+        </columns>
+      </TableView>
+   </center>
+   <top>
+      <MenuBar fx:id="addContactMenu" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" onMouseClicked="#showAddContact" text="Add Contact">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
